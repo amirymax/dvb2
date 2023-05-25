@@ -20,9 +20,7 @@ while True:
     if len(contours):
         c = max(contours, key=cv2.contourArea)
         coor_x, coor_y, width, height = cv2.boundingRect(c)
-        count += 1;
-        tmp_x += coor_x;
-        tmp_y += coor_y
+        count += 1; tmp_x += coor_x; tmp_y += coor_y
         if coor_x + width // 2 > 320:
             r_count += 0 if flag else 1
             color = (255, 0, 0)
